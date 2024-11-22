@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Computer Science A Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .options {
+            margin: 10px 0;
+        }
+        .options button {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .options button:hover {
+            background: #0056b3;
+        }
+        .explanation {
+            margin: 10px 0;
+            padding: 10px;
+            background: #e9f7ef;
+            border: 1px solid #d4edda;
+            border-radius: 5px;
+        }
+        .result {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        #restart {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #restart:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AP Computer Science A Quiz</h1>
+        <div id="quiz-container"></div>
+        <div id="result" class="result"></div>
+        <button id="restart" style="display: none;">Restart Quiz</button>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
