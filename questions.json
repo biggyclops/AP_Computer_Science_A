@@ -1,8 +1,93 @@
 [
     {
-        "question": "What is 2 + 2?",
-        "options": ["3", "4", "5", "6"],
-        "correctAnswer": "4",
-        "explanation": "2 + 2 equals 4."
+        "question": "What is printed as a result of executing the code segment? System.out.println(\"W\"); System.out.println(\"X\"); System.out.print(\"Y\"); System.out.print(\"Z\");",
+        "options": ["WXYZ", "W\nXYZ", "WX\nYZ", "W\nX\nYZ", "W\nX\nY\nZ"],
+        "correctAnswer": "D",
+        "explanation": "The println statements move the cursor to a new line after the \"W\" is printed and after the \"X\" is printed. The print statements do not move the cursor to a new line after the \"Y\" is printed and after the \"Z\" is printed."
+    },
+    {
+        "question": "What is printed as a result of executing the code segment? System.out.print(\"cat \"); System.out.println(\"dog \"); System.out.println(\"horse \"); System.out.print(\"cow \");",
+        "options": ["cat dog horse cow", "cat dog\nhorse\ncow", "cat dog\nhorse cow", "cat\ndog\nhorse cow", "cat\ndog\nhorse\ncow"],
+        "correctAnswer": "B",
+        "explanation": "The first statement prints \"cat \". The second statement prints \"dog \" and moves the cursor to a new line. The third statement prints \"horse \" and moves the cursor to a new line. The last statement prints \"cow \"."
+    },
+    {
+        "question": "What is printed as a result of executing the code segment? System.out.print(\"Hello!\"); System.out.println(\"How \"); System.out.print(\"are \"); System.out.print(\"you?\");",
+        "options": ["Hello!Howareyou?", "Hello!How are you?", "Hello!\nHow are you?", "Hello!How\nare you?", "Hello!\nHow\nare\nyou?"],
+        "correctAnswer": "D",
+        "explanation": "The first statement prints \"Hello!\". The second statement prints \"How \" and moves the cursor to a new line. The third statement prints \"are \". The last statement prints \"you?\"."
+    },
+    {
+        "question": "The code segment is intended to produce the following output but does not work as intended. Which of the following changes can be made so that the code segment produces the intended output? System.out.println(hello); // Line 1 System.out.print(world); // Line 2",
+        "options": ["Inserting System.out.print(); between lines 1 and 2", "Inserting System.out.println(); between lines 1 and 2", "Changing println in line 1 to print", "Changing print in line 2 to println", "Enclosing hello in line 1 and world in line 2 in quotation marks"],
+        "correctAnswer": "E",
+        "explanation": "For the words hello and world to be interpreted as string literals, they must be enclosed in quotation marks."
+    },
+    {
+        "question": "The code segment is intended to produce the following output but may not work as intended. Which change, if any, can be made so that the code segment produces the intended output? System.out.print(\"Ready\"); // Line 1 System.out.print(\"Set\"); // Line 2 System.out.print(\"Go!\"); // Line 3",
+        "options": ["Changing print to println in lines 1 and 2", "Changing print to println in line 3", "Interchanging lines 1 and 3", "Replacing all three lines with the single statement System.out.println(\"Ready Set Go!\");", "No change is needed; the code segment works correctly as is."],
+        "correctAnswer": "A",
+        "explanation": "Using println in lines 1 and 2 will cause the cursor to move to a new line after \"Ready\" is printed and after \"Set\" is printed, producing the intended output."
+    },
+    {
+        "question": "Each of the following code segments is intended to print the word Hello. Which of the following code segments works as intended?",
+        "options": ["I. System.out.print(\"Hello\");", "II. System.out.print(Hello);", "III. System.out.print(He); System.out.print(llo);"],
+        "correctAnswer": "A",
+        "explanation": "Code segment I correctly prints the string literal \"Hello\". Code segment II does not work as intended because Hello is not enclosed in quotation marks. Code segment III does not work as intended because He and llo are not enclosed in quotation marks."
+    },
+    {
+        "question": "Which statement correctly declares a variable that can store a temperature rounded to the nearest tenth of a degree?",
+        "options": ["boolean patientTemp;", "double patientTemp;", "int patientTemp;", "patientTemp = 0;", "patientTemp = 0.0;"],
+        "correctAnswer": "B",
+        "explanation": "A double variable can store both the whole number and the fractional parts of a temperature."
+    },
+    {
+        "question": "Which of the following is most appropriate to replace /* missing code */ in the program? int pointsEarned; /* missing code */",
+        "options": ["int totalPoints; int percentage;", "double totalPoints; int percentage;", "int totalPoints; double percentage;", "int totalPoints; boolean percentage;", "double totalPoints; boolean percentage;"],
+        "correctAnswer": "C",
+        "explanation": "It is most appropriate to store totalPoints as an int because it represents a whole number and to store percentage as a double because it represents a decimal value."
+    },
+    {
+        "question": "Which of the following best describes the data types that should be used to replace /* data type 1 */ and /* data type 2 */?",
+        "options": ["The variable x should be declared as an int and the variable y should be declared as a boolean.", "The variable x should be declared as an int and the variable y should be declared as an int.", "The variable x should be declared as a double and the variable y should be declared as an int.", "The variable x should be declared as a double and the variable y should be declared as a boolean.", "The variable x should be declared as a boolean and the variable y should be declared as a boolean."],
+        "correctAnswer": "D",
+        "explanation": "The variable x should be declared as a double because it is assigned a decimal value. The variable y should be declared as a boolean because it is assigned the value true."
+    },
+    {
+        "question": "Which of the following can be used as a replacement for /* missing expression */ so that the code segment prints 94?",
+        "options": ["3", "x", "x - 1", "x + 1", "1 - 2 * x"],
+        "correctAnswer": "D",
+        "explanation": "In this case, the code segment initializes x to 3 and sets y to 4. It then assigns the value 1 + 2 * y, or 9, to x and prints 94."
+    },
+    {
+        "question": "Which of the following can be used to replace /* missing code */ so that the code segment works as intended?",
+        "options": ["I. double baseArea = pi * r * r; double volume = baseArea * h;", "II. double volume = pi * r * r; volume = volume * h;", "III. double volume = pi * r * r * h;"],
+        "correctAnswer": "E",
+        "explanation": "Code segment I correctly calculates baseArea as pi * r * r, then correctly calculates volume by multiplying baseArea by h. Code segment II calculates the base area of the cylinder and temporarily stores it in volume. This value is multiplied by h, resulting in the correct volume. Code segment III correctly calculates the volume by multiplying pi * r * r * h in a single expression."
+    },
+    {
+        "question": "Which of the following replacements for /* missing code */ will cause an ArithmeticException to occur?",
+        "options": ["I. int top = x - y; int bottom = y - x;", "II. int top = 2 * x; int bottom = y - top;", "III. int top = x + y; int bottom = 2 * top;"],
+        "correctAnswer": "B",
+        "explanation": "The correct answer is II only. In statement I, the value of top is -10, the value of bottom is 10, the integer division -10 / 10 evaluates to -1, and the code segment does not cause any errors or exceptions. Statement II throws an ArithmeticException error because the value of top is 20 and the value of bottom is 0, which leads to integer division by 0."
+    },
+    {
+        "question": "What is the value of x when the code segment has been executed? int a = 1; int b = 2; int c = 3; int d = 4; double x = a + b * c % d;",
+        "options": ["1.0", "2.5", "3.0", "7.0", "9.0"],
+        "correctAnswer": "C",
+        "explanation": "The multiplication b * c is performed first and evaluates to 6. The modulus operation 6 % d is performed next and evaluates to 2. The addition operation a + 2 is performed last and evaluates to 3."
+    },
+    {
+        "question": "Which of the following arithmetic expressions evaluates to 1?",
+        "options": ["I. 2 / 5 % 3", "II. 2 / (5 % 3)", "III. 2 / 5 + 1"],
+        "correctAnswer": "D",
+        "explanation": "Expression I evaluates to 0 since 2 / 5 evaluates to 0 and 0 % 3 also evaluates to 0. Expression II evaluates to 1 since 5 % 3 evaluates to 2 and 2 / 2 evaluates to 1. Expression III evaluates to 1 since 2 / 5 evaluates to 0 and 0 + 1 evaluates to 1."
+    },
+    {
+        "question": "What is printed as a result of executing the code segment? int x = 10; int y = 20; System.out.print(y + x / y);",
+        "options": ["1", "1.5", "3", "20", "20.5"],
+        "correctAnswer": "D",
+        "explanation": "The integer division x / y is performed first, resulting in 0. Then the sum of 20 and 0, or 20, is printed."
     }
 ]
+
